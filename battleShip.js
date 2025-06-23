@@ -46,3 +46,37 @@ function damagedOrSunk(board, attacks) {
 
   return result;
 }
+
+
+/**
+ * function damagedOrSunk(board,attack){
+    let result = {sunk: 0, damaged: 0, notTouched: 0, points: 0};
+     let touch=0;
+     for (let y = 0; y < board.length; y++) {
+      for (let x = 0; x < board[y].length; x++) {
+        let y = attack[0][0];
+        let x = attack[0][1];
+        let cellTouched = board[y][x];
+        if (cellTouched !== 0) { 
+          touch +=1 
+        }
+      }
+    }
+        for (let boat in batteau) {
+          let totalParts = batteau[boat];    
+    
+        if (touch === 0) {
+          result.notTouched++;
+          points -= 1;
+        } else if (touch < totalParts) {
+          result.damaged++;
+          points += 0.5;
+        } else if (touch === totalParts) {
+          result.sunk++;
+          points += 1;
+        }
+        return result;
+        }
+      }
+
+ */
